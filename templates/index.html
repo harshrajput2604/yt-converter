@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Converter</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2>YouTube Video Converter</h2>
+    <form method="post" action="/download">
+      <input type="text" name="url" placeholder="Paste YouTube URL" required>
+      <select name="format">
+        <option value="mp4">Download MP4</option>
+        <option value="mp3">Download MP3</option>
+      </select>
+      <button type="submit">Convert</button>
+    </form>
+  </div>
+</body>
+</html>
